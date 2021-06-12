@@ -147,6 +147,7 @@ html, body {
                     text-decoration: none;
                     cursor: pointer;
                     transition: $clr-transition;
+                    z-index: 10;
                     i {
                         margin: auto;
                         line-height: 1;
@@ -166,17 +167,17 @@ html, body {
                     right: 0;
                     border-radius: 50%;
                     background: rgba($color: #ff543c, $alpha: .4);
-                    z-index: 1;
+                    z-index: -1;
                     animation: pulse 1500ms infinite;
                 }
                 @keyframes pulse {
                     0%{
                         transform: scale(1);
-                        opacity: 0;
+                        opacity: .75;
                     }
                     100%{
-                        transform: scale(2.25);
-                        opacity: 1;
+                        transform: scale(2);
+                        opacity: .12;
                     }
                 }
                 .settings:hover {
@@ -900,18 +901,24 @@ html, body {
     left: 0;
     right: 0;
     border-radius: 14px;
-    background: rgba($color: #494949, $alpha: .4);
+    background: rgba($color: #949494, $alpha: .6);
     z-index: 1;
     animation: pulse 1500ms infinite;
 }
 @keyframes pulse {
     0%{
-        transform: scale(.95);
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        opacity: .2;
+    }
+    90%{
         opacity: 0;
     }
     100%{
-        transform: scale(1.11);
-        opacity: 1;
+        transform: scale(1.18);
+        opacity: 0;
     }
 }
 

@@ -245,9 +245,9 @@ replacement for  clearfix is  display: flow-root;
     line-height: 25px;
     padding: 19px 0;
 }
-.home-btn {
-    /* display: none; */
-}
+/* .home-btn {
+    display: none;
+} */
 .desktop-logo {
     display: none;
 }
@@ -607,6 +607,32 @@ replacement for  clearfix is  display: flow-root;
     }
     #mainHeader {
         height: 54px;
+        /* margin: 0 auto;
+        max-width: 1600px; */
+    }
+    #dFormLink {
+        position: relative;
+    }
+    #dFormLink::after {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.17);
+        animation: pusle 1500ms infinite;
+    }
+    @keyframes pusle {
+        0%{
+            transform: scale(.9);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1.25);
+            opacity: 1;
+        }
     }
     #leftHamBtn {
         display: none;
@@ -761,9 +787,9 @@ replacement for  clearfix is  display: flow-root;
         padding: 5px;
         margin-right: 10px;
     }
-    .product-box {
-        /* margin: 0; */
-    }
+    /* .product-box {
+        margin: 0;
+    } */
     .products-container {
         row-gap: 4em;
     }

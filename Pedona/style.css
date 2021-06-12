@@ -35,6 +35,33 @@ html, body {
     display: none;
 }
 
+/*PULSE EFFECT FOR CLICKABLE ELEMENTS*/
+.pusle {
+    position: relative;
+}
+.pusle::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.17);
+    animation: pulsing 1350ms infinite;
+    z-index: -1;
+}
+@keyframes pulsing {
+    0%{
+        transform: scale(.9);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1.12);
+        opacity: 1;
+    }
+}
+
 
 /*HEADER - Top header*/
 .top-header {

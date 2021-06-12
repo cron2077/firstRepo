@@ -33,7 +33,7 @@ function closeUser() {
 
 
 //COUNTDOWN ------------------------------
-let countDownDate = new Date("May 21 ,2021 15:37:25").getTime();
+let countDownDate = new Date("sep 21 ,2021 15:37:25").getTime();
 let htmlEl = document.querySelector('.date-ul');
 
 let container = setInterval( function() {

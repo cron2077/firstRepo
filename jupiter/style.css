@@ -35,9 +35,9 @@ html, body {
     padding: .3em .2em 0 .2em;
     /* border: 1px solid red; */
 }
-.social-icons-container {
+/* .social-icons-container {
     
-}
+} */
 .fa-lightbulb {
     padding: .46em .6em;
     font-size: 1.4rem;
@@ -202,9 +202,9 @@ html, body {
     animation: transitionY;
     animation-duration: 140ms;
 }
-.search-form {
-    /* width: 85%; */
-}
+/* .search-form {
+    width: 85%;
+} */
 .close-search {
     position: absolute;
     top: .2em;
@@ -283,9 +283,9 @@ html, body {
 
 
 /* SHOP CART */
-.shopping-cart-container {
+/* .shopping-cart-container {
     
-}
+} */
 .m-cart-aTag {
     position: relative;
     padding: 10px 28px;
@@ -874,6 +874,30 @@ html, body {
     .d-login-li {
         position: relative;
     }
+    .d-login-li::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 7.2em;
+        top: 0;
+        bottom: 0;
+        left: 2.85em;
+        right: 0;
+        background: rgba(0, 0, 0, .2);
+        animation: pulse 1500ms infinite;
+        z-index: -1;
+    }
+    @keyframes pulse {
+        0%{
+            transform: scale(.9);
+            opacity: 0;
+        }
+        100%{
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+
     .login-modal {
         position: absolute;
         bottom: -442px;
@@ -1039,9 +1063,9 @@ html, body {
         display: block;
         margin: 0 auto;
     }
-    .search-container {
-        /* position: relative; */
-    }
+    /* .search-container {
+        position: relative;
+    } */
     .desktop-search {
         display: block;
         position: relative;
