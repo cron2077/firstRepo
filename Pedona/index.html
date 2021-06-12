@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedona</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <div id="site">
+
+        <header id="mainHeader">
+            <div class="top-header">
+                <div class="top-header-contents csw">
+                    <span class="header-message">
+                        Mid-season sale up to 20% off.Use code "SALEOFF20"
+                    </span>
+                    <ul class="site-select">
+                        <li>
+                            <select class="celect-box" name="lang" id="langSelect">
+                                <option value="1">Eng</option>
+                                <option value="2">Rus</option>
+                                <option value="3">De</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select class="celect-box" name="currency" id="curSelect">
+                                <option value="1">USD</option>
+                                <option value="2">EUR</option>
+                                <option value="3">RUB</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-header csw">
+                <div class="-left-container">
+                    <a id="mSearch" class="mobile-search-ham" href="#">
+                        <i class="fas fa-search my-search"></i>
+                    </a>
+                    <div class="mobile-search-container">
+                        <div class="white-bg-container">
+                            <span id="closeSearchM" class="mobile-search-close-btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            <form class="search-form" action="search.html" method="POST">
+                                <div class="form-content">
+                                    <label class="m-s-label">
+                                        <input class="input" type="text" name="mSearch" id="mSearch" required autocomplete="off" placeholder="Search products">
+                                        <span class="input-line"></span>
+                                    </label>
+                                    <button class="search-btn" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="desktop-search-container">
+                        <form class="desktop-s-form" method="POST" action="desctopSearch.html">
+                            <label class="d-s-label">
+                                <input class="d-search-input" type="text" name="dSearch" id="dSearch" required placeholder="Search products">
+                                <span class="input-outline"></span>
+                            </label>
+                            <button class="d-search-btn" type="submit">
+                                <i class="fas fa-search my-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <img class="logo" src="img/logo.jpg" alt="site-logo">
+                <div class="-right-container">
+                    <a id="mUi" class="m-user-ham" href="#">
+                        <i class="fas fa-bars my-bars"></i>
+                    </a>
+                    <div class="mobile-ui-container">
+                        <div class="white-bg-ui">
+                            <span id="closeUiBtn" class="close-ui-btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            <ul class="user-ui">
+                                <li>
+                                    <a class="ui-link" href="#">
+                                        <span class="ui-description">user profile</span>
+                                        <i class="far fa-user"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="ui-link" href="#">
+                                        <span class="ui-description">favorite items</span>
+                                        <i class="far fa-heart"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="ui-link" href="#">
+                                        <span class="ui-description">shopping cart</span>
+                                        <i class="fas fa-shopping-bag"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="ui-link" href="#">
+                                        <span class="ui-description">profile settings</span>
+                                        <i class="fas fa-cog"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desktop-ui-container">
+                        <ul class="desk-ui">
+                            <li>
+                                <a href="#" class="d-ui-link">
+                                    <i class="far fa-user"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-ui-link">
+                                    <i class="far fa-heart"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-ui-link">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-ui-link">
+                                    <i class="fas fa-cog"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="site-nav-ul">
+                    <li>
+                        <a class="main-nav-link" href="#">home</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link" href="#">shop</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link" href="#">blog</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link" href="#">portfolio</a>
+                    </li>
+                    <li>
+                        <a class="main-nav-link" href="#">pages</a>
+                    </li>
+                    <li class="display-none">
+                        <a class="main-nav-link" href="#">contact us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="site-map">
+                <div class="map-container csw">
+                    <ul class="map-list">
+                        <li>
+                            <a class="map-link" href="#">Home</a>
+                        </li>
+                        <li>
+                            <span class="slash">/</span>
+                            <a class="map-link current-page" href="#">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="mainTag">
+            <!-- <div class="site-map">
+                <div class="map-container csw">
+                    <ul class="map-list">
+                        <li>
+                            <a class="map-link" href="#">Home</a>
+                        </li>
+                        <li>
+                            <span class="slash">/</span>
+                            <a class="map-link current-page" href="#">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+            <aside id="mainAside">
+                <div class="filter-box">
+                    <p class="filter-open">
+                            Categories
+                        <span class="filter-close">
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                    </p>
+                    <ul class="filter-content">
+                        <li>
+                            <a class="filter-link" href="#">Accessories</a>
+                            <span class="filter-number">(2)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Bedroom</a>
+                            <span class="filter-number">(1)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Clothing</a>
+                            <span class="filter-number">(18)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Furniture</a>
+                            <span class="filter-number">(22)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Livingroom</a>
+                            <span class="filter-number">(16)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Men</a>
+                            <span class="filter-number">(26)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Women</a>
+                            <span class="filter-number">(29)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Shoes</a>
+                            <span class="filter-number">(36)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Laptops & Desktops</a>
+                            <span class="filter-number">(10)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Handbag</a>
+                            <span class="filter-number">(12)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Sport & Outdoors</a>
+                            <span class="filter-number">(9)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Toy,Kids & Baby</a>
+                            <span class="filter-number">(12)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-box">
+                    <p class="filter-open">
+                        Color
+                    <span class="filter-close">
+                        <i class="fas fa-sort-down"></i>
+                    </span>
+                </p>
+                    <ul class="filter-content">
+                        <li>
+                            <a class="filter-link" href="#">Gold</a>
+                            <span class="filter-number">(2)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">Black</a>
+                            <span class="filter-number">(9)</span>
+                        </li>
+                        <li>
+                            <a class="filter-link" href="#">White</a>
+                            <span class="filter-number">(12)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-box">
+                    <p class="filter-open">
+                        Filter by Price
+                        <span class="filter-close">
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                    </p>
+                    <div class="filter-content">
+                        <div class="price-slider">
+                            <span class="stop-point left-stop"></span>
+                            <span class="stop-point right-stop"></span>
+                        </div>
+                        <div class="price-btn-container">
+                            <span class="pricr-range">
+                                Price: $40 - $115
+                            </span>
+                            <button class="price-btn" type="button">Filter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-box">
+                    <p class="filter-open">
+                        Top Rated Products
+                        <span class="filter-close">
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                    </p>
+                    <ul class="filter-content">
+                        <li>
+                            <section class="top-rated-box">
+                                <div class="top-rated-head">
+                                    <img src="img/small-1.jpg" alt="recomended-product">
+                                </div>
+                                <div class="top-rated-body">
+                                    <h5 class="top-rated-title">Bagpack</h5>
+                                    <span class="top-rated-price">$60.00</span>
+                                </div>
+                            </section>
+                        </li>
+                        <li>
+                            <section class="top-rated-box">
+                                <div class="top-rated-head">
+                                    <img src="img/small-2.jpg" alt="recomended-product">
+                                </div>
+                                <div class="top-rated-body">
+                                    <h5 class="top-rated-title">Auctor sem argu</h5>
+                                    <span class="top-rated-price">$80.00</span>
+                                </div>
+                            </section>
+                        </li>
+                        <li>
+                            <section class="top-rated-box">
+                                <div class="top-rated-head">
+                                    <img src="img/small-3.jpg" alt="recomended-product">
+                                </div>
+                                <div class="top-rated-body">
+                                    <h5 class="top-rated-title">Shoes</h5>
+                                    <span class="top-rated-price">$100.00</span>
+                                </div>
+                            </section>
+                        </li>
+                        <li>
+                            <section class="top-rated-box">
+                                <div class="top-rated-head">
+                                    <img src="img/small-4.jpg" alt="recomended-product">
+                                </div>
+                                <div class="top-rated-body">
+                                    <h5 class="top-rated-title">Volupat sit amet</h5>
+                                    <span class="top-rated-price">$50.00</span>
+                                </div>
+                            </section>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="products-container">
+                <div class="sort-bar-desktop">
+                    <ul class="grid-list">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-grip-horizontal"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-list"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sort-c">
+                        <span class="sort-title">Sort By:</span>
+                        <select name="grid-select" id="gridSelect">
+                            <option value="1">Newest First</option>
+                            <option value="2">Oldest First</option>
+                            <option value="3">High price to low</option>
+                            <option value="4">Low price to high</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products-grid">
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-1.jpg" alt="product-photo">
+                                <span class="badge-new ">NEW</span>
+                            </a>
+                            <div class="hover-container">
+                                <div class="hover-content">
+                                    <a href="#" class="hover-link">quick look</a>
+                                    <a href="#" class="hover-link">add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-2.jpg" alt="product-photo">
+                                <!-- <span class="badge-sale">SALE!</span> -->
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-3.jpg" alt="product-photo">
+                                <!-- <span class="badge-sale">SALE!</span> -->
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-4.jpg" alt="product-photo">
+                                <!-- <span class="badge-sale">SALE!</span> -->
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-5.jpg" alt="product-photo">
+                                <!-- <span class="badge-sale">SALE!</span> -->
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-6.jpg" alt="product-photo">
+                                <span class="badge-new">NEW</span>
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-7.jpg" alt="product-photo">
+                                <span class="badge-sale">SALE!</span>
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="nike.html" class="product-image-link">
+                                <img src="img/item-8.jpg" alt="product-photo">
+                                <span class="badge-sale">SALE!</span>
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-9.jpg" alt="product-photo">
+                                <span class="badge-sale">SALE!</span>
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-10.jpg" alt="product-photo">
+                                <span class="badge-sale">SALE!</span>
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-11.jpg" alt="product-photo">
+                                <!-- <span class="badge-sale">SALE!</span> -->
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-head">
+                            <a href="#" class="product-image-link">
+                                <img src="img/item-12.jpg" alt="product-photo">
+                                <!-- <span class="badge-sale">SALE!</span> -->
+                            </a>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-catedory">
+                                <span class="product-map">
+                                    Accessories, Livingroom
+                                </span>
+                                <ul class="product-rating">
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star star-active" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product-star" href="#">
+                                            <i class="far fa-star"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h5 class="product-title">
+                                Actor Sem Argu
+                            </h5>
+                            <span class="product-price">$100.00</span>
+                        </div>
+                    </section>
+                </div>
+                <div class="products-pages-bar">
+                    <ul class="p-page-list">
+                        <li>
+                            <a class="page-link active-page" href="#">1</a>
+                        </li>
+                        <li>
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer id="mainFooter">
+            <div class="top-footer">
+                <div class="footer-box">
+                    <img class="footer-logo" src="img/logo-dark.jpg" alt="brand-logo">
+                    <p class="footer-p">
+                        We are s team of designers and developers that create <br>
+                        high quality Magento, Wordpress, Prestashop, Opencart
+                    </p>
+                    <span class="f-span">
+                        ADRESS: 6688Princess Road, London, UK
+                    </span>
+                    <span class="f-span">
+                        PHONE: (123) 800 456 789-987
+                    </span>
+                    <span class="f-span">
+                        EMAIL: Contact@plazathemes.com
+                    </span>
+                </div>
+                <div class="footer-box">
+                    <h5 class="f-box-title">
+                        Customer Care
+                    </h5>
+                    <ul class="footer-list">
+                        <li>
+                            <a class="footer-link" href="#">Clothing</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Shoes</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Handbag</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Accessories</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Fashion</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h5 class="f-box-title">
+                        Information
+                    </h5>
+                    <ul class="footer-list">
+                        <li>
+                            <a class="footer-link" href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">My orders</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a class="footer-link" href="#">Returns & Exchanges</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h5 class="f-box-title">
+                        Join our Newsletter Now
+                    </h5>
+                    <p class="footer-p">
+                        Get E-mail updates about our latest shop and special
+                        offers.
+                    </p>
+                    <form class="newsletter-f" action="newsletter.html" method="POST">
+                        <label class="newsl-label">
+                            <input class="newsl-input" type="email" name="email" id="email" required placeholder="Enter your e-mail">
+                            <button class="newsletter-btn" type="submit">subscribe</button>
+                        </label>
+                    </form>
+                    <ul class="socilal-list">
+                        <li>
+                            <a class="socila-icon-link face-icon" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="socila-icon-link twit-icon" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="socila-icon-link insta-icon" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="socila-icon-link rss-icon" href="#">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="socila-icon-link tumb-icon" href="#">
+                                <i class="fab fa-tumblr"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="socila-icon-link pin-icon" href="#">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <p class="copyright">
+                    Copyright 2019 Plazathemes. All Rights Reserved
+                </p>
+            </div>
+        </footer>
+        <div id="toTopBtn" class="scrollBtnConrainer">
+            <!-- <a class="scroll-btn" href="#">
+                <i class="fas fa-chevron-up"></i>
+            </a> -->
+            <button class="scroll-btn" type="button">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,210 @@
+
+:root {
+    --mainFont: 'Poppins', sans-serif;
+    --gray: #f7f7f9;
+    --darkerGray: #efefef;
+    --drayBg: #e6e6e6;
+    --filterbg: #f9f9f9;
+    --darkLight: #2b2b2b;
+    --dark: #222222;
+    --red: #cc2121;
+    --lightBorder: #f7f7f7;
+    --grayText: #76777c;
+    --textHover: #c2c2c2;
+    --facebook: #3c5b9b;
+    --twitter: #40c1df;
+    --insta: #c619b8;
+    --orange: #eb8314;
+    --brightRed: #ed3c32;
+    --purple: #c72982;
+    --star: #f4cb24;
+}
+
+/*Nike PAGE*/
+.product-page-container {
+    margin-bottom: 8em;
+}
+/* .product-el-container {
+    margin: 0 auto;
+    max-width: 1205px;
+} */
+.img-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 555px;
+    margin: 0 auto;
+    background: url('img/product-img.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visible-img-container {
+    overflow: hidden;
+    max-width: 555px;
+    width: 555px;
+    min-width: 330px;
+    height: 555px;
+    margin-bottom: 1em;
+}
+.current-p-img {
+    display: none;
+    max-width: 555px;
+    min-width: 330px;
+}
+.current-p-img.visible {
+    display: block;
+    animation: show-img 690ms cubic-bezier(0,1.09,.95,.93);
+}
+.optional-imgs.visible {
+    filter: opacity(.5);
+}
+/*animation for img hover*/
+@keyframes show-img {
+    0%{
+        clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    }
+    100%{
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
+.images-slider-container {
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    justify-content: space-between;
+}
+.optional-imgs {
+    max-width: 100px;
+    min-width: 55px;
+    border: 1px solid var(--drayBg);
+}
+.optional-imgs:hover {
+    filter: opacity(.6);
+}
+.slider-arrow {
+    padding: 1em .8em;
+    cursor: pointer;
+}
+.slider-arrow:hover {
+    color: var(--textHover);
+}
+.product-name {
+    text-align: center;
+}
+.p-rating-container {
+    display: flex;
+    align-items: center;
+}
+.product-rating-new {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+}
+.product-rating-new li a {
+    font-size: 1.2rem;
+}
+.customer-review {
+    color: var(--textHover);
+    margin-left: 1em;
+    line-height: 1.3rem;
+}
+.product-info-f {
+    border-top: 1px solid var(--darkerGray);
+    border-bottom: 1px solid var(--darkerGray);
+    padding: 2em 0;
+    margin: 2em 0;
+}
+.p-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p-number-input {
+    font-size: 1.1rem;
+    padding: .8em 1.2em;
+    border: 2px solid var(--dark);
+    border-radius: 4px;
+    width: 2.3em;
+}
+.add-to-cart-p-btn {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    background: var(--dark);
+    border: 1px solid var(--dark);
+    border-radius: 4px;
+    padding: 1.1em 3em;
+    box-sizing: border-box;
+}
+
+.reviews {
+    margin: 0 auto;
+    padding: 2.5em 0 2em 0;
+}
+.reviews-head {
+    display: flex;
+    justify-content: center;
+    padding: .5em 0;
+    border-bottom: 1px solid var(--textHover);
+}
+.review-tab {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--textHover);
+    padding: 0 1em;
+}
+.review-tab::first-letter {
+    text-transform: uppercase;
+}
+.review-tab-active {
+    color: var(--brightRed);
+}
+.reviews-body {
+    padding: 2.8em 0;
+    border-bottom: 1px solid var(--textHover);
+}
+
+
+.related-title {
+    display: block;
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 3px solid var(--brightRed);
+    max-width: 500px;
+}
+.related-title::first-letter {
+    text-transform: uppercase;
+}
+.rel-p-container {
+    padding: 3em 0;
+}
+
+
+@media (min-width: 605px) {
+    .p-buttons-container {
+        margin: 0 auto;
+        max-width: 500px;
+        justify-content: space-evenly;
+    }
+}
+@media (min-width: 1200px) {
+    .rel-p-container {
+        display: flex;
+    }
+}
+@media (min-width: 1500px) {
+    .product-el-container {
+        display: flex;
+        gap: 2em;
+    }
+    .p-buttons-container {
+        margin: 0;
+        justify-content: flex-start;
+        gap: 1.6em;
+    }
+}

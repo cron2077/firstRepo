@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+
+    <div id="site">
+
+        <header id="mainHeader">
+
+            <div class="width-controller csw">
+
+                <nav class="main-nav">
+                    <a href="index.html" class="home-link">
+                        <img class="nav-logo" src="img/logo.png" alt="site-logo">
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Games</a></li>
+                        <li><a href="#">Streams</a></li>
+                        <li><a href="#">Esports</a></li>
+                    </ul>
+                    <span class="nav-icons">
+                        <i class="fas fa-volume-down"></i>
+                    </span>
+                </nav>
+                <div class="user-buttons">
+                    <form action="search.html" method="POST" class="search">
+                        <label>
+                            <input class="search-input" type="text" name="search" id="search" autocomplete="off" required>
+                            <span class="underline"></span>
+                        </label>
+                        <button class="search-btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <div class="u-btns">
+                        <a id="settings" class="settings" href="#">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                        <a id="logIn" href="#">Log in</a>
+                        <a id="join" href="#">Join now</a>
+                        <div class="settings-modal">
+
+                            <div class="settings-container">
+                                <span class="close-settings-btn">X</span>
+                                <div class="tabs-panel">
+                                    <ul class="tabs-ul">
+                                        <li data-tab-target="#profileTab">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">profile</a>
+                                            </div>
+                                        </li>
+                                        <li data-tab-target="#accountTab">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">account</a>
+                                            </div>
+                                        </li>
+                                        <li data-tab-target="#notifications">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">notifications</a>
+                                            </div>
+                                        </li>
+                                        <li data-tab-target="#settingsTab" class="active-tab">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">settings</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content-container">
+                                    <div id="profileTab" class="tab-elements" data-tab-content>
+                                        <h3 class="settings-title">profile</h3>
+                                    </div>
+                                    <div id="accountTab" class="tab-elements" data-tab-content>
+                                        <h3 class="settings-title">account</h3>
+                                    </div>
+                                    <div id="notifications" class="tab-elements" data-tab-content>
+                                        <h3 class="settings-title">notifications</h3>
+                                    </div>
+                                    <div id="settingsTab" class="tab-elements active-tab-content" data-tab-content>
+                                        <h3 class="settings-title">general</h3>
+                                        <ul class="checkbox-ul">
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckOne" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckOne">
+                                                    </label>
+                                                </div>
+                                                <span>Newsletter subscribe</span>
+                                            </li>
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckTwo" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckTwo">
+                                                    </label>
+                                                </div>
+                                                <span>Keep in background when closing the window</span>
+                                            </li>
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckTree" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckTree">
+                                                    </label>
+                                                </div>
+                                                <span>Show in Application bar</span>
+                                            </li>
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckFour" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckFour">
+                                                    </label>
+                                                </div>
+                                                <span>Allow comments</span>
+                                            </li>
+                                        </ul>
+                                        <h3 class="settings-title">appearance</h3>
+                                        <div class="font-size">
+                                            <span>Font size</span>
+                                            <ul class="font-ul">
+                                                <li>
+                                                    <div class="toggle-appearance">
+                                                        <input id="switchFontSmall" type="checkbox" name="checkbox">
+                                                        <label class="switch-label-font" for="switchFontSmall">
+                                                            A
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="toggle-appearance">
+                                                        <input id="switchFontSmall" type="checkbox" name="checkbox">
+                                                        <label class="switch-label-font" for="switchFontSmall">
+                                                            A
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="toggle-appearance">
+                                                        <input id="switchFontSmall" type="checkbox" name="checkbox">
+                                                        <label class="switch-label-font" for="switchFontSmall">
+                                                            A
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="color">
+                                            <span>Theme</span>
+                                            <ul class="colors-ul">
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="purpule-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="green-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="blue-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="pink-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="red-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main id="contentTag">
+            <section class="game-page">
+                <div class="page-head">
+                    <div class="hero">
+                        <img src="img/cover-long-cyberpunk.png" alt="">
+                    </div>
+                </div>
+                <div class="page-body"></div>
+            </section>
+        </main>
+
+    </div>
+    
+</body>
+</html>

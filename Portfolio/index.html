@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiril Yordanov - Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" defer></script>
+    <script src="js/animation.js" defer></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+
+    <div id="site">
+        
+        <div id="themeToggle" class="toggle-theme-container">
+            <input id="checkboxSwitch" type="checkbox">
+            <label class="switch-Label" for="checkboxSwitch">Toggle</label>
+            <!-- <i class="fas fa-toggle-on"></i> -->
+        </div>
+
+        <div class="small-screen">
+            <p>Sorry this page does not support small screen design.</p>
+        </div>        
+
+        <section class="content">
+            <div class="left">
+                <ul class="projects-list">
+                    <!-- <li>
+                        <a href="../Agora/index.html" target="_blank">Agora</a>
+                    </li> -->
+                    <li>
+                        <a href="../Auray/index.html" target="_blank">Auray</a>
+                    </li>
+                    <li>
+                        <a href="../delphinos/index.html" target="_blank">Delphinos</a>
+                    </li>
+                    <li>
+                        <a href="../jupiter/index.html" target="_blank">Jupiter</a>
+                    </li>
+                    <li>
+                        <a href="../Pedona/index.html" target="_blank">Pedona</a>
+                    </li>
+                    <li>
+                        <a href="../GamesGOG/index.html" target="_blank">Games</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <!-- <img src="img/P1 - Copy.jpg" alt="project"> -->
+                <img src="img/P2 - Copy.jpg" alt="project">
+                <img src="img/P3 - Copy.jpg" alt="project">
+                <img src="img/P4 - Copy.jpg" alt="project">
+                <img src="img/P5 - Copy.png" alt="project">
+                <img src="img/P6.png" alt="project-photo">
+            </div>
+        </section>
+
+        <section class="special">
+            <span>
+                log in
+            </span>
+        </section>
+        <div class="message-box">
+            <div class="message-container">
+                <span class="special-close">
+                    <i class="far fa-times-circle"></i>
+                </span>
+                <div class="form-modal">
+                    <div class="form-img">
+                        <img src="img/log-in-gif.gif" alt="">
+                    </div>
+                    <form action="lig-in.html" method="POST" class="log-in">
+                        <h2 class="form-welcome">
+                            Welcome back
+                        </h2>
+                        <label class="form-content">
+                            <input class="form-input" type="email" name="email" id="email" autocomplete="off" required>
+                            <span class="input-underline-title">email</span>
+                        </label>
+                        <label class="form-content">
+                            <input class="form-input" type="password" name="password" id="password" required>
+                            <span class="input-underline-title">password</span>
+                        </label>
+                        <a class="miss-password" href="#">Forgot your password?</a>
+                        <button class="form-submit" type="submit">log in</button>
+                        <span class="or">or use</span>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://twitter.com/?lang=en">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            <a href="https://accounts.google.com/ServiceLogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

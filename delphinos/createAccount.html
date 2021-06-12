@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELPHINUS - Create Account</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <div id="site">
+
+        <header id="mainHeader">
+            <div class="left_menu">
+                <!-- <a id="leftHamBtn" class="ham-button" href="#">
+                    <i class="fas fa-bars"></i>
+                </a> -->
+                <button type="button" id="leftHamBtn" class="ham-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu">
+                        <span class="close-ham-left">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <ul class="mobile-ul">
+                            <li>
+                                <div class="select_box">
+                                    <select class="sel-mobile-lang" name="lang" id="lang">
+                                        <option value="1">EN</option>
+                                        <option value="2">DE</option>
+                                        <option value="3">RU</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="select_box">
+                                    <select class="sel-mobile-curr" name="currency" id="currency">
+                                        <option value="1" selected>&#36;</option>
+                                        <option value="2">&#8364;</option>
+                                        <option value="3">&#8381;</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <form class="mobile-search" action="">
+                                    <div class="form-content-mobile">
+                                        <input class="mobile-input" type="text" placeholder="search" required>
+                                        <span class="black-bar"></span>
+                                        <button class="mobile-search-Btn" type="submit">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desktop-menu">
+                    <ul class="left_menu_ul">
+                        <li>
+                            <div class="select_box">
+                                <select name="lang" id="lang">
+                                    <option value="1">EN</option>
+                                    <option value="2">DE</option>
+                                    <option value="3">RU</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select_box">
+                                <select name="currency" id="currency">
+                                    <option value="1" selected>&#36;</option>
+                                    <option value="2">&#8364;</option>
+                                    <option value="3">&#8381;</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="header-link-search" href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="mobile-logo-container">
+                <a class="mobile-logo" href="#">
+                    <img src="img/brand-logo.jpg" alt="">
+                </a>
+            </div>
+            <div class="right_menu">
+                <!-- <a id="rightHamBtn" class="ham-button" href="#">
+                    <i class="fas fa-bars"></i>
+                </a> -->
+                <button type="button" id="rightHamBtn" class="ham-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="mobile-menu-container-right">
+                    <div class="mobile-menu">
+                        <span id="closeHmRight" class="close-ham-right">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <ul class="mobile-ul">
+                            <li>
+                                <div class="menu-item">
+                                    <a class="header-link-mobile" href="#">login</a>
+                                    <div class="login-modal-container">
+                                        <div class="login-modal">
+                                            <form action="POST"></form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item">
+                                    <a class="header-link-mobile" href="#">wishlist</a>
+                                    <span class="wish-count-mobile">3</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item">
+                                    <a class="header-link-mobile" href="#">my cart</a>
+                                    <span class="cart-count-mobile">4</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desktop-menu">
+                    <ul class="right_menu_ul">
+                        <li class="desktop-f-li">
+                            <a id="dFormLink" class="header-link" href="#">login</a>
+                            <div class="desktop-form-wrapper">
+                                <div class="form-head">
+                                    <h3 class="desktop-f-title">login</h3>
+                                    <span id="closeDeskF" class="d-f-closeBtn">
+                                        <i class="far fa-window-close"></i>
+                                    </span>
+                                </div>
+                                <form id="decktopLogin" class="desktop-form" action="desktopSubmit.html" method="POST">
+                                    <div class="form-content">
+                                        <label class="desktop-login-label">email address</label>
+                                        <input class="desktop-login-input" type="email" name="email" id="dEmail" required>
+                                    </div>
+                                    <div class="form-content">
+                                        <label class="desktop-login-label">Password</label>
+                                        <input class="desktop-login-input" type="password" name="password" id="dPassword" autocomplete="off" required>
+                                    </div>
+                                    <div class="f-buttons">
+                                        <button id="submitDesktop" class="d-f-submit" type="submit">login</button>
+                                        <label class="descktop-checkbox-container">
+                                            <input type="checkbox" name="checkbox" id="checkboxDesk">
+                                            <span class="checkbox-label">Remenber me</span>
+                                        </label>
+                                        <a class="d-lost-p" href="#">Lost your password?</a>
+                                    </div>
+                                </form>
+                                <div class="create-account-container">
+                                    <span class="create-account-text">Not registered? No problem</span>
+                                    <a class="desktop-create-account" href="createAccount.html">create account</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="header-link" href="#">wishlist</a>
+                            <span class="wish-count">3</span>
+                        </li>
+                        <li>
+                            <a class="header-link" href="#">my cart</a>
+                            <span class="cart-count">4</span>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+        </header>
+        <!-- <div class="dummy-header">
+            width-controler
+        </div> -->
+        <nav id="mainNav" class="site-nav">
+            <div class="nav-contents width-controler">
+                <div class="desktop-logo">
+                    <img src="img/brand-logo.jpg" alt="">
+                </div>
+                <ul class="site-nav-content">
+                    <li>
+                        <a class="nav-link-mobile home-btn" href="index.html">home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link-mobile" href="#">shop styles</a>
+                    </li>
+                    <li>
+                        <a class="nav-link-mobile" href="#">pages</a>
+                    </li>
+                    <li>
+                        <a class="nav-link-mobile" href="#">elements</a>
+                    </li>
+                    <li>
+                        <a class="nav-link-mobile" href="#">features</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-map">
+
+            <div class="width-controler map-container">
+                <div class="map-path">
+                    <span class="map-item">Home</span>
+                    /
+                    <span class="map-item">Create Account</span>
+                </div>
+                <span class="map-point">Create Account</span>
+            </div>
+        </section>
+
+        <section class="account-creation-container">
+            <div class="form-head-create">
+                <h3 class="create-account-title">create account</h3>
+            </div>
+            <form id="createAccount" class="create-a-form" action="" method="POST">
+                <div class="form-content-create">
+                    <label class="c-a-label">your email</label>
+                    <input class="c-a-input" type="email" name="email" id="email" required>
+                </div>
+                <div class="form-content-create">
+                    <label class="c-a-label">password</label>
+                    <input class="c-a-input" type="password" name="password" id="password" required autocomplete="off">
+                </div>
+                <div class="form-content-create">
+                    <label class="c-a-label">repeat password</label>
+                    <input class="c-a-input" type="password" type="password" name="password" id="rPassword" required autocomplete="off">
+                </div>
+                <div class="form-content-create">
+                    <button id="createAbtn" class="create-a-btn" type="submit">create account</button>
+                </div>
+            </form>
+        </section>
+
+        <footer id="mainFooter">
+            <div class="free-stuff">
+                <span class="f-ship">free shipping</span>
+                <span class="f-return">free return</span>
+            </div>
+            <div class="info-stuff">
+                <div class="footer-box">
+                    <h4 class="info-title">information</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4 class="info-title">collections</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Living Room</a></li>
+                        <li><a href="#">Bathroom</a></li>
+                        <li><a href="#">Kitchen</a></li>
+                        <li><a href="#">Bed Room</a></li>
+                        <li><a href="#">Garden</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4 class="info-title">extras</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Gift Vouchers</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="#">Specials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-box">
+                    <h4 class="info-title">mt account</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Older History</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-stuff">
+                <ul class="social-container-footer">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+                <span class="copyRight">
+                    &#xa9; 2020 Delphinus
+                </span>
+            </div>
+        </footer>
+        <div id="scrlBtn" class="ToTopBtn-container">
+            <button id="toTop" class="toTopBtn">
+                <i class="fas fa-long-arrow-alt-up"></i>
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>

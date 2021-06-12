@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    
+    <div id="site">
+
+        <header id="mainHeader">
+
+            <div class="width-controller csw">
+
+                <nav class="main-nav">
+                    <a href="index.html" class="home-link">
+                        <img class="nav-logo" src="img/logo.png" alt="site-logo">
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">Streams</a></li>
+                        <li><a href="#">Esports</a></li>
+                    </ul>
+                    <span class="nav-icons">
+                        <i class="fas fa-volume-down"></i>
+                    </span>
+                </nav>
+                <div class="user-buttons">
+                    <form action="search.html" method="POST" class="search">
+                        <label>
+                            <input class="search-input" type="text" name="search" id="search" autocomplete="off" required>
+                            <span class="underline"></span>
+                        </label>
+                        <button class="search-btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <div class="u-btns">
+                        <a id="settings" class="settings" href="#">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                        <a id="logIn" href="#">Log in</a>
+                        <a id="join" href="#">Join now</a>
+                        <div class="settings-modal">
+
+                            <div class="settings-container">
+                                <span class="close-settings-btn">X</span>
+                                <div class="tabs-panel">
+                                    <ul class="tabs-ul">
+                                        <li data-tab-target="#profileTab">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">profile</a>
+                                            </div>
+                                        </li>
+                                        <li data-tab-target="#accountTab">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">account</a>
+                                            </div>
+                                        </li>
+                                        <li data-tab-target="#notifications">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">notifications</a>
+                                            </div>
+                                        </li>
+                                        <li data-tab-target="#settingsTab" class="active-tab">
+                                            <div class="tab-wrapper">
+                                                <span class="tab-line"></span>
+                                                <a href="#">settings</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content-container">
+                                    <div id="profileTab" class="tab-elements" data-tab-content>
+                                        <h3 class="settings-title">profile</h3>
+                                    </div>
+                                    <div id="accountTab" class="tab-elements" data-tab-content>
+                                        <h3 class="settings-title">account</h3>
+                                    </div>
+                                    <div id="notifications" class="tab-elements" data-tab-content>
+                                        <h3 class="settings-title">notifications</h3>
+                                    </div>
+                                    <div id="settingsTab" class="tab-elements active-tab-content" data-tab-content>
+                                        <h3 class="settings-title">general</h3>
+                                        <ul class="checkbox-ul">
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckOne" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckOne">
+                                                    </label>
+                                                </div>
+                                                <span>Newsletter subscribe</span>
+                                            </li>
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckTwo" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckTwo">
+                                                    </label>
+                                                </div>
+                                                <span>Keep in background when closing the window</span>
+                                            </li>
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckTree" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckTree">
+                                                    </label>
+                                                </div>
+                                                <span>Show in Application bar</span>
+                                            </li>
+                                            <li>
+                                                <div class="toggle">
+                                                    <input id="switchCheckFour" type="checkbox" name="checkbox">
+                                                    <label class="switch-label" for="switchCheckFour">
+                                                    </label>
+                                                </div>
+                                                <span>Allow comments</span>
+                                            </li>
+                                        </ul>
+                                        <h3 class="settings-title">appearance</h3>
+                                        <div class="font-size">
+                                            <span>Font size</span>
+                                            <ul class="font-ul">
+                                                <li>
+                                                    <div class="toggle-appearance">
+                                                        <input id="switchFontSmall" type="checkbox" name="checkbox">
+                                                        <label class="switch-label-font" for="switchFontSmall">
+                                                            A
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="toggle-appearance">
+                                                        <input id="switchFontSmall" type="checkbox" name="checkbox">
+                                                        <label class="switch-label-font" for="switchFontSmall">
+                                                            A
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="toggle-appearance">
+                                                        <input id="switchFontSmall" type="checkbox" name="checkbox">
+                                                        <label class="switch-label-font" for="switchFontSmall">
+                                                            A
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="color">
+                                            <span>Theme</span>
+                                            <ul class="colors-ul">
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="purpule-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="green-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="blue-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="pink-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="crl-option">
+                                                        <div class="clr-bg"></div>
+                                                        <div class="red-clr click-detect"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main id="contentTag">
+            
+            <div class="games-grid">
+
+                <section class="game-box">
+
+                    <div class="badge">1</div>
+                    <div class="img-box">
+                        <a href="#" class="game-link">
+                            <img class="game-cover" src="img/cover-Just-Chatting.png" alt="game-cover">
+                        </a>
+                        <h3 class="g-name">Just Chatting</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-Just-Chatting.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Just Chatting</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">2</div>
+                    <div class="img-box">
+                        <a href="#" class="game-link">
+                            <img class="game-cover" src="img/cover-outriders.jpg" alt="game-cover">
+                        </a>
+                        <h3 class="g-name">Outriders</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-outriders.jpg" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Outriders</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">3</div>
+                    <div class="img-box">
+                        <a href="#" class="game-link">
+                            <img class="game-cover" src="img/cover-valorant.png" alt="game-cover">
+                        </a>
+                        <h3 class="g-name">Valorant</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-valorant.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Valorant</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">4</div>
+                    <div class="img-box">
+                        <a href="cyberpunk2077.html" class="game-link">
+                            <img class="game-cover" src="img/cover-cyberpunk-2077.png" alt="game-cover">
+                        </a>
+                        <h3 class="g-name">Cyberpunk 2077</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-cyberpunk-2077.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Cyberpunk 2077</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">5</div>
+                    <div class="img-box">
+                        <a href="#" class="game-link">
+                            <img class="game-cover" src="img/cover-fall-guys.png" alt="game-cover">
+                        </a>
+                        <h3 class="g-name">Just Chatting</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-fall-guys.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Fall Guys</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">6</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-Fortnite.png" alt="game-cover">
+                        <h3 class="g-name">Just Chatting</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-Fortnite.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Fortnite</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">7</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/Cover-GTAV.png" alt="game-cover">
+                        <h3 class="g-name">Just Chatting</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/Cover-GTAV.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">GTA V</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">8</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-minecraft.png" alt="game-cover">
+                        <h3 class="g-name">Just Chatting</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-minecraft.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Minecraft</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">9</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-the-witcher3.png" alt="game-cover">
+                        <h3 class="g-name">The Witcher 3</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-the-witcher3.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">The Witcher 3</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">10</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-warzone.png" alt="game-cover">
+                        <h3 class="g-name">Call of Duty: Warzone</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-warzone.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Call of Duty: Warzone</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">11</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-Control.png" alt="game-cover">
+                        <h3 class="g-name">Control</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-Control.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Control</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">12</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/81b0422a05c8c4b6c6f37f09a856d61f.png" alt="game-cover">
+                        <h3 class="g-name">Dying Light 2</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/81b0422a05c8c4b6c6f37f09a856d61f.png" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Dying Light 2</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">11</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-doom.jpg" alt="game-cover">
+                        <h3 class="g-name">DOOM</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-doom.jpg" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">DOOM (2016)</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section class="game-box">
+
+                    <div class="badge">12</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-shadow.jpg" alt="game-cover">
+                        <h3 class="g-name">Shadow of the Tomb Raider</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-layer-game">
+                        <div class="img-bg">
+                            <img src="img/cover-shadow.jpg" alt="game-photo-cover">
+                        </div>
+                        <div class="content-bg">
+                            <h3 class="g-name-back">Shadow of the Tomb Raider</h3>
+                            <div class="stats-back">
+                                <p class="stat">
+                                    559k
+                                    <span>watching</span>
+                                </p>
+                                <p class="stat">
+                                    25.1k
+                                    <span>streams</span>
+                                </p>
+                            </div>
+                            <a href="#" class="more-streams">See more streamers</a>
+                            <div class="streamers-box-back">
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Judy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Evelynn</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                                <div class="streamer-box">
+                                    <a href="#" class="streameer-link">
+                                        <div class="play-icon-container">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                    </a>
+                                    <h5 class="streamer-name">Moxy</h5>
+                                    <span class="streamer-views">36.4k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- <section class="game-box">
+
+                    <div class="badge">1</div>
+                    <div class="img-box">
+                        <img class="game-cover" src="img/cover-Just-Chatting.png" alt="game-cover">
+                        <h3 class="g-name">Just Chatting</h3>
+                        <div class="game-stats">
+                            <p class="views">
+                                <i class="fas fa-male"></i>
+                                559.8k
+                            </p>
+                            <div class="streamers-front">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="background-layer-game">
+                        <h3 class="g-name-back">Just Chatting</h3>
+                        <div class="stats-back">
+                            <p class="stat">
+                                559k
+                                <span>watching</span>
+                            </p>
+                            <p class="stat">
+                                25.1k
+                                <span>streams</span>
+                            </p>
+                        </div>
+                        <a href="#" class="more-streams">See more streamers</a>
+                        <div class="streamers-box-back">
+                            <div class="streamer-box">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="streamer-photo">
+                                <h5 class="streamer-name">xQc</h5>
+                                <span class="streamer-views">36.4k</span>
+                            </div>
+                            <div class="streamer-box">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="streamer-photo">
+                                <h5 class="streamer-name">Evelynn</h5>
+                                <span class="streamer-views">36.4k</span>
+                            </div>
+                            <div class="streamer-box">
+                                <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="streamer-photo">
+                                <h5 class="streamer-name">Moxy</h5>
+                                <span class="streamer-views">36.4k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </section> -->
+                
+
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>

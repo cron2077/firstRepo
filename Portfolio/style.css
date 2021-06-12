@@ -1,0 +1,388 @@
+
+:root {
+    --clr-text: black;
+    --clr-border: #f9ce21;
+    --bg-clr-gray: #eeeeee;
+    --bg-clr-light: #fafafa;
+    --switch-bg: #ccc;
+    --switch: #fff;
+    --switchHover: #f9ce21;
+    --gray-text: #303030;
+    --darkBG: #1c1c1c;
+    --darkYellowForm: #b69100;
+    --box-shadow: rgb(0 0 0 / 20%);
+    --dropshadow: rgb(0 0 0 / 10%);
+    --icon-clr: #1d1d1d;
+    --mainFont: 'Montserrat', sans-serif;
+}
+.darkmode {
+    --clr-text: #d6d6d6;
+    --clr-border: #32fcce;
+    --bg-clr-gray: #111111;
+    --bg-clr-light: #212121;
+    --switch-bg: #353535;
+    --switch: #c7c7c7;
+    --switchHover: #32fcce;
+    --gray-text: #d3d3d3;
+    --darkYellowForm: #0f5e4b;
+    --box-shadow: rgb(0 0 0 / 60%);
+    /* --clr-text: white;  --=old colors
+    --clr-border: #ffdc51;
+    --bg-clr-gray: #181818;
+    --bg-clr-light: #222225;
+    --switch-bg: #353535;
+    --switch: #c7c7c7;
+    --gray-text: #d3d3d3; */
+    --dropshadow: rgb(0 0 0 / 30%);
+    --icon-clr: #e4e4e4;
+    --mainFont: 'Montserrat', sans-serif;
+    transition: 100ms ease-in;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--mainFont);
+    font-size: 100%;
+    background: var(--bg-clr-gray);
+}
+
+
+#site {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 1.5em;
+    overflow: hidden;
+}
+.content {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5em;
+    max-width: 80em;
+    height: 56em;
+    width: 65em;
+    padding: 0 0 0 4em;
+    margin: auto;
+    background: var(--bg-clr-light);
+    /* border: 1px solid lightgray; */
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px 4px var(--dropshadow);
+    overflow: hidden;
+}
+.right {
+    height: 100%;
+    max-width: 1100px;
+}
+.right > img {
+    display: none;
+    height: 100%;
+}
+
+.projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.projects-list li {
+    padding: .6em 0;
+}
+.projects-list li a {
+    text-decoration: none;
+    color: var(--clr-text);
+    font-size: 1.2rem;
+    padding: 0 .3em;
+    box-shadow: inset 0 -2px 0 var(--clr-border);
+    transition: 190ms ease-in;
+}
+.projects-list li a:hover {
+    color: black;
+    box-shadow: inset 0 -22px 0 var(--clr-border);
+}
+
+img.show-photo { /*TO ACCEPT THE NEW CLASS*/
+    display: block;
+    animation: fade-in;
+    animation-duration: 400ms;
+}
+@keyframes fade-in { /*THE OPENNING FROM CENTER*/
+    0%{clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);}
+    100%{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
+}
+
+/* TOGGLE theme BUTTON */
+.toggle-theme-container {
+    position: absolute;
+    top: 3em;
+    right: 3.5em;
+    cursor: pointer;
+    /* padding: 1em .6em; */
+}
+.toggle-theme-container > i {
+    font-size: 2rem;
+    color: var(--icon-clr);
+}
+/* animated switch button */
+#checkboxSwitch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+.switch-Label {
+    display: block;
+    position: relative;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 4.5em;
+    height: 2.1em;
+    border-radius: 50px;
+    background: var(--switch-bg);
+}
+.switch-Label::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 26px;
+    height: 26px;
+    background: var(--switch);
+    border-radius: 30px;
+    transition: 220ms ease-in;
+}
+/* #checkboxSwitch:checked + .switch-Label {
+    background: var(--bg-clr-ligh);
+} */
+
+/*movement of the white dot*/
+#checkboxSwitch:checked + .switch-Label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+/* #checkboxSwitch:hover + .switch-Label::after {
+    background: var(--switchHover);
+} */
+
+.small-screen {
+    display: none;
+}
+.small-screen > p {
+    font-size: 1.1rem;
+    color: var(--gray-text);
+}
+
+/*SPECIAL BTN AT BOTTOM*/
+.special {
+    position: absolute;
+    display: flex;
+    bottom: -10px;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 12px;
+    background: var(--bg-clr-light);
+    cursor: pointer;
+}
+.special > span {
+    font-size: 1.1rem;
+    margin: auto;
+    color: var(--gray-text);
+    transform: translateY(-2px);
+    transition: 210ms ease-in;
+}
+.special:hover > span {
+    transform: translateY(-6px);
+}
+.message-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .95);
+    animation: fade-in-modal;
+    animation-duration: 180ms;
+}
+.message-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* width: 15em; */
+    /* padding: 3em 6em; */
+    /* border-radius: 10px; */
+    /* background: var(--bg-clr-light); */
+    margin: auto;
+    animation: openWide;
+    animation-duration: 200ms;
+}
+.message-container > span {
+    color: var(--gray-text);
+}
+.special-close {
+    position: absolute;
+    top: -19px;
+    right: -14px;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+.special-close > i {
+    font-weight: 100;
+    color: var(--clr-border);
+    transition: color 130ms ease-in;
+}
+.special-close:hover > i {
+    color: #0f5e4b;
+}
+/*ANIMATIONS FOR SPECIAL MODAL*/
+@keyframes fade-in-modal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* @keyframes openWide {
+    0%{
+        width: 11em;
+    }
+    100%{
+        width: 15em;
+    }
+} */
+
+@media (max-width: 1000px) {
+    .content {
+        display: none;
+    }
+    .small-screen {
+        display: block;
+    }
+    .special {
+        display: none;
+    }
+}
+
+/*LOG IN FORM stuff*/
+.form-modal {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 26px;
+    background: var(--bg-clr-light);
+    box-shadow: 1px 6px 10px 2px var(--box-shadow);
+}
+.form-img {
+    width: 28em;
+}
+.form-img > img {
+    display: block;
+    width: 100%;
+}
+.log-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26em;
+    padding: 0 2em;
+}
+.form-welcome {
+    margin: 0 0 4em 0;
+    color: var(--clr-border);
+}
+.form-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2.2em;
+}
+.form-input {
+    order: 1;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: .3em 0;
+    color: var(--darkYellowForm);
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--clr-border);
+    background: var(--bg-clr-light);
+}
+.input-underline-title {
+    position: relative;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--clr-text);
+    cursor: pointer;
+}
+.input-underline-title::after {
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--darkYellowForm);
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 190ms;
+}
+.form-input:focus + .input-underline-title::after {
+    transform: scale(1);
+}
+.miss-password {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: .8rem;
+    margin: 1em 0 4em 0;
+    color: var(--clr-text);
+    transition: color 190ms;
+}
+.miss-password:hover {
+    color: var(--clr-border);
+}
+.form-submit {
+    padding: .5em 1em;
+    width: 10em;
+    font-size: 1rem;
+    border-radius: 3px;
+    color: var(--clr-border);
+    border: 1px solid var(--clr-border);
+    background: var(--bg-clr-light);
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 1.1em;
+    transition: 130ms ease-in;
+}
+.form-submit:focus {
+    outline: 2px solid #0f5e4b;     
+}
+.form-submit:hover {
+    color: #0f5e4b;
+    border: 1px solid #0f5e4b;
+}
+.or {
+    font-size: .8rem;
+    color: var(--clr-text);
+    margin-bottom: 3.6em;
+}
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.social-icons > a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--clr-border);
+    transition: color 130ms ease-in;
+}
+.social-icons > a:hover {
+    color: var(--darkYellowForm);
+}

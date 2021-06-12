@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auray</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div id="site">
+
+        <header id="mainHeader">
+            <div class="site-nav">
+                <img class="site-logo" src="img/logo-white.png" alt="site-logo">
+                <div class="lists">
+                    <ul class="site-nav-ul">
+                        <li>
+                            <a href="#" class="header-link">home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-link">shop</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-link">pages</a>
+                        </li>
+                        <li class="desctop-only">
+                            <a href="#" class="header-link">blog</a>
+                        </li>
+                        <li class="desctop-only">
+                            <a href="#" class="header-link">about us</a>
+                        </li>
+                        <li class="desctop-only">
+                            <a href="#" class="header-link">portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header-link">contact us</a>
+                        </li>
+                    </ul>
+                    <div id="userMenu" class="user-btns-container">
+                        <div class="user-relative-container">
+                            <span id="closeUserMenu" class="closeUser">
+                                <i class='bx bx-x-circle' ></i>
+                            </span>
+                            <ul class="user-buttons-ul">
+                                <li><a href="#">
+                                    <i class='bx bx-lock'></i>
+                                </a></li>
+                                <li>
+                                    <a href="#">
+                                        <i class='bx bx-user' ></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class='bx bx-cart' ></i>
+                                        <!-- <i class='bx bx-headphone' ></i>
+                                        <i class='bx bx-lock-open' ></i> -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="search-nav-bar">
+                <ul class="search-ul">
+                    <li>
+                        <span id="catOpen">
+                            categories
+                            <i class='bx bx-menu'></i>
+                        </span>
+                        <div class="cat-container">
+                            <div class="relative-cat-container">
+                                <ul class="cat-ul">
+                                    <li>
+                                        <a href="#" class="cat-link">Men</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="cat-link">Women</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="cat-link">Summer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="cat-link">Winter</a>
+                                    </li>
+                                </ul>
+                                <span class="close-cat">
+                                    <i class='bx bx-x-circle'></i>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="desctop-only">
+                        <span class="delivery">free domestic delivery</span>
+                    </li>
+                    <li>
+                        <span id="openSearch" class="search-mobile-open">
+                            <i class='bx bx-search' ></i>
+                        </span>
+                        <div id="searchContainer" class="search-form-container">
+                            <div class="relative-form-container">
+                                <span id="closeSearch" class="close-search">
+                                    <i class='bx bx-x-circle' ></i>
+                                </span>
+                                <form action="search.html" method="GET" class="search-form">
+                                    <label class="search-label" for="">
+                                        <input class="input" type="text" required placeholder="search here...">
+                                        <span class="underline"></span>
+                                    </label>
+                                    <button class="search-btn" type="submit">
+                                        <i class='bx bx-search' ></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="mainTag">
+            <section class="hero">
+                <div class="hero-wrapper">
+                    <div class="deal-box">
+                        <p class="deal-title">
+                            Deal of <span>the Day</span>
+                        </p>
+                        <ul class="date-ul">
+                            <li>
+                                <span id="day" class="date-num"></span>
+                                <span class="date-indicator">days</span>
+                            </li>
+                            <li>
+                                <span id="hours" class="date-num"></span>
+                                <span class="date-indicator">hours</span>
+                            </li>
+                            <li>
+                                <span id="minutes" class="date-num"></span>
+                                <span class="date-indicator">minutes</span>
+                            </li>
+                            <li>
+                                <span id="seconds" class="date-num"></span>
+                                <span class="date-indicator">seconds</span>
+                            </li>
+                        </ul>
+                        <div class="deal-buttons">
+                            <a class="deal-link view-all" href="#">view all</a>
+                            <a class="deal-link shop-now" href="#">shop now</a>
+                        </div>
+                    </div>
+                    <div class="hero-img-box">
+                        <span class="hero-img-badge">
+                            <span>$300</span>
+                            $230
+                        </span>
+                        <div class="hero-img-container">
+                            <i class='bx bx-left-arrow-alt' ></i>
+                            <img src="img/Header-img.png" alt="">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="service-bar">
+                <div class="service-box">
+                    <i class='bx bx-rocket' ></i>
+                    <span>free delivery</span>
+                </div>
+                <div class="service-box">
+                    <i class='bx bx-headphone' ></i>
+                    <span>24/h customer service</span>
+                </div>
+                <div class="service-box">
+                    <i class='bx bx-lock-open'></i>
+                    <span>payment secured</span>
+                </div>
+            </div>
+            <div class="products-container">
+                <div class="p-tabs-bar">
+                    <ul class="tabs-ul">
+                        <li>
+                            <span>special</span>
+                        </li>
+                        <li>
+                            <span class="current-tab">latest</span>
+                        </li>
+                        <li>
+                            <span>bestsellers</span>
+                        </li>
+                        <li>
+                            <span>features</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid">
+
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-1.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-2.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-3.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                        <span class="badge out-of-stock">out of stock</span>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-4.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-5.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-6.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-7.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                        <span class="badge off-badge">-25%</span>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-8.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-9.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                        <span class="badge new-badge">new</span>
+                    </section>
+                    <section class="product-box">
+                        <div class="product-container">
+                            <div class="product-head">
+                                <a class="p-image" href="#">
+                                    <img src="img/item-10.png" alt="product-photo">
+                                </a>
+                                <div class="hover-box">
+                                    <div class="circle-bg">
+                                        <a class="hover-link-p" href="#">quick look</a>
+                                        <span class="hover-line"></span>
+                                        <a class="hover-link-p" href="#">add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body">
+                                <p class="price">$1050.00</p>
+                                <p class="p-name">Random Placeholder Text For Product</p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+        <footer id="mainFooter">
+            <section class="image-blocks">
+                <div class="mobile-block">
+                    <a class="f-block-img-container" href="#">
+                        <div class="img-text">
+                            <p>discover</p>
+                            <h5>Hottest news</h5>
+                            <span>#auray</span>
+                        </div>
+                    </a>
+                    <a class="f-imh-container-mid-scr-size" href="#">
+                        <div class="f-img-text">
+                            <p>divided</p>
+                            <h5>Summer <br>
+                                <span class="bold-word">Essentials</span>
+                            </h5>
+                            <span class="fake-link-span">discover</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="desktop-block">
+                    <div class="tall-f-img">
+                        <div class="tall-f-content">
+                            <p>weekly deals</p>
+                            <h5><span>Explore</span> great saving</h5>
+                            <a href="#">watch now</a>
+                        </div>
+                    </div>
+                    <div class="small-p-container">
+                        <div class="up-row">
+                            <div class="rect-img-up">
+                                <div class="rect-img-content-up">
+                                    <p>discover</p>
+                                    <h5>Hottest news</h5>
+                                    <a href="#">#auray</a>
+                                </div>
+                            </div>
+                            <div class="squer-img-up">
+                                <div class="squer-imgcontent-up">
+                                    <p>divided</p>
+                                    <h5><span>Summer</span> Essentials</h5>
+                                    <a href="#">discover</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down-row">
+                            <div class="rect-img-down">
+                                <div class="rect-img-content-down">
+                                    <p>exclusive</p>
+                                    <h5>Discounts <span>& offers</span></h5>
+                                </div>
+                            </div>
+                            <div class="squer-img-down">
+                                <div class="squer-img-content-down">
+                                    <p>see the great</p>
+                                    <h5>Attention to <span>Details</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="newletter-box">
+                <p class="news-title">stay up to date</p>
+                <form class="newsltr-form" action="newsletter.html">
+                    <label class="form-content">
+                        <input type="email" name="emailNews" id="emailNews" required placeholder="Enter your email address">
+                        <span class="underlineNesw"></span>
+                    </label>
+                    <button class="newslrt-Btn" type="submit">subscribe</button>
+                </form>
+                <span class="desctop-inderline"></span>
+            </div>
+            <div class="footer-content">
+                <div class="f-box">
+                    <p class="-f-title">contact details</p>
+                    <div class="f-contact-d-box">
+                        <div class="icon-f">
+                            <i class='bx bx-phone' ></i>
+                        </div>
+                        <div class="details-c">
+                            <p>0203 - 980 - 14 - 79</p>
+                            <p>0203 - 470 - 24 - 96</p>
+                        </div>
+                    </div>
+                    <div class="f-contact-d-box">
+                        <div class="icon-f">
+                            <i class='bx bx-mail-send' ></i>
+                        </div>
+                        <div class="details-c">
+                            <p>auray_shop@mail.com</p>
+                            <p>auray@hotmail.com</p>
+                        </div>
+                    </div>
+                    <div class="f-contact-d-box">
+                        <div class="icon-f">
+                            <i class='bx bxl-skype' ></i>
+                        </div>
+                        <div class="details-c">
+                            <p>auray_shop_contact</p>
+                            <p>auray_support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-box">
+                    <p class="-f-title">my account</p>
+                    <ul class="f-box-ul">
+                        <li>
+                            <a href="#" class="footer-link">My account</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Personal information</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Payment methods</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Orders history</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Discount</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-box">
+                    <p class="-f-title">customer service</p>
+                    <ul class="f-box-ul">
+                        <li>
+                            <a href="#" class="footer-link">Help & contact</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Shipping & taxes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Return policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Privacy policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Affiliates</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-box">
+                    <p class="-f-title">information</p>
+                    <ul class="f-box-ul">
+                        <li>
+                            <a href="#" class="footer-link">New products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Top sellers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Special products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Manufacturers</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Suppliers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-box">
+                    <p class="-f-title">quick contact</p>
+                    <form action="" method="POST" class="quick-contact-form">
+                        <div class="form-content-f">
+                            <input type="email" name="review-email" id="reviewEmail">
+                        </div>
+                        <div class="form-content-f">
+                            <textarea name="textarea" id="textArea" cols="30" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="quick-c-btn">send</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <div id="userHam" class="ham-icon-container">
+            <span id="hamBtn" class="ham-btn">
+                <i class='bx bx-menu'></i>
+            </span>
+        </div>
+        <div id="toTopBtn" class="up-btn">
+            <i class='bx bx-arrow-to-top'></i>
+        </div>
+
+    </div>
+    
+</body>
+</html>

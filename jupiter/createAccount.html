@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUPITER</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div id="site">
+
+        <header id="mainHeader">
+            <div class="top-header-desktop csw">
+                <div class="top-left">
+                    <ul class="contacts-header">
+                        <li>
+                            <span class="phone-number">
+                                <i class="fas fa-mobile-alt"></i>
+                                (555) 0123 45 6789
+                            </span>
+                        </li>
+                        <li>
+                            <!-- <span class="gray-line"></span> -->
+                            <a href="#" class="site-mail">
+                                <i class="far fa-envelope"></i>
+                                info@domain.store
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-right">
+                    <ul class="select-ul">
+                        <li>
+                            <div class="select-box">
+                                <select class="lang-select" name="lang" id="lang">
+                                    <option value="1">EN</option>
+                                    <option value="2">DE</option>
+                                    <option value="3">RU</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select-box">
+                                <select class="currency-select" name="currency" id="currency">
+                                    <option value="1">USD</option>
+                                    <option value="2">EUR</option>
+                                    <option value="3">RUB</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="login-ul">
+                        <li class="d-login-li">
+                            <span class="gray-line"></span>
+                            <a id="logInD" href="#">Login or Register</a>
+                            <div class="login-modal">
+                                <div class="login-head">
+                                    <h4 class="login-title">Login</h4>
+                                    <span class="red-orb"></span>
+                                    <a class="d-login-close" href="#">
+                                        <i class="fas fa-times"></i>
+                                    </a>
+                                </div>
+                                <form class="d-login-f" method="POST">
+                                    <div class="form-content">
+                                        <label class="d-login-label">email address</label>
+                                        <input class="d-login-input" type="email" name="email" id="email" required>
+                                    </div>
+                                    <div class="form-content">
+                                        <label class="d-login-label">Password</label>
+                                        <input class="d-login-input" type="password" name="password" id="password" required autocomplete="off">
+                                    </div>
+                                    <div class="d-login-buttons form-content">
+                                        <button class="d-login-btn" type="submit">login</button>
+                                        <label class="d-input-check">
+                                            <input class="remember-check" type="checkbox" name="checkbox" id="checkbox">
+                                            <span class="rememb">Remember me</span>
+                                        </label>
+                                        <a class="lost-pass" href="#">Lost your password?</a>
+                                    </div>
+                                </form>
+                                <div class="register-container">
+                                    <span class="register-text">
+                                        Not registered? No problem
+                                    </span>
+                                    <a class="create-account-link" href="#">
+                                        create account
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="gray-line"></span>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <span class="gray-line"></span>
+                            <a href="#">Need Help?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-header csw">
+                <div class="social-icons-container header-box">
+                    <a id="socialBtn" class="s-icons-a" href="#">
+                        <i class="far fa-lightbulb"></i>
+                        <div class="icons-btn-text">
+                            <span class="s-i-text">Toggle panel</span>
+                            <span class="color-text">social icons</span>
+                        </div>
+                    </a>
+                    <div class="social-menu-wrapper">
+                        <div class="mobile-social-menu">
+                            <span id="closeSocial" class="close-btn">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            <ul class="m-social-ul">
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logo-container header-box">
+                    <img class="site-logo" src="img/logo.jpg" alt="brand-logo">
+                </div>
+
+                <div class="search-container header-box">
+                    <a id="hamMenuBtn" class="search-toggle-btn" href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                    <div id="searchHam" class="search-menu-container">
+                        <div class="white-search-container">
+                            <span id="searchClose" class="close-search">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            <ul class="search-elements-ul">
+                                <li>
+                                    <form class="search-form" action="">
+                                        <div class="m-form-content">
+                                            <input class="m-form-input" id="text" type="text" name="text" required placeholder="search" autocomplete="off">
+                                            <span class="teal-bar"></span>
+                                            <button class="m-f-submit" type="submit">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </li>
+                                <li>
+                                    <div class="shopping-cart-container">
+                                        <a class="m-cart-aTag" href="#">
+                                            <i class="fas fa-shopping-bag"></i>
+                                            <span class="shop-number">0</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="account-link" href="loginMobile.html">
+                                        Login
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="account-link" href="#">
+                                        Create account
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="desktop-search">
+                        <ul class="ul-search">
+                            <li>
+                                <!-- <a id="dSearchBtn" class="open-d-search" href="#">
+                                    <i class="fas fa-search my-search"></i>
+                                    Search
+                                </a> -->
+                                <div class="search-container">
+                                    <form class="d-search-f" method="POST" action="deskSearch.html">
+                                        <label class="s-form-content">
+                                            <input class="d-s-input" type="text" name="text" id="searchD" placeholder="Search" required>
+                                            <span class="underline"></span>
+                                            <button class="d-search-btn" type="submit">
+                                                <i class="fas fa-search d-search"></i>
+                                            </button>
+                                        </label>
+                                    </form>
+                                </div>
+                                <!-- <div class="search-container">
+                                    <form action="desktopSearch.html" method="POST" class="desk-s-form">
+                                        <label class="f-content">
+                                            <input class="d-s-input" type="text" name="text" id="dSearch">
+                                            <span class="teal-line-d"></span>
+                                            <button class="d-s-btn" type="submit">
+                                                <i class="fas fa-search sBtn"></i>
+                                            </button>
+                                        </label>
+                                    </form>
+                                    <a class="search-close" href="#">
+                                        <i class="fas fa-times"></i>
+                                    </a>
+                                </div> -->
+                            </li>
+                            <li>
+                                <div class="shopping-cart-container">
+                                    <a class="m-cart-aTag" href="#">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span class="shop-number">0</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav id="siteNav">
+            <ul class="nav-elements">
+                <li>
+                    <a class="m-nav-link active-page" href="index.html">
+                        Home
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="m-nav-link" href="#">
+                        Shop
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="m-nav-link" href="#">
+                        Page
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="m-nav-link" href="#">
+                        Elements
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </li>
+                <li class="bigger-s-size-el">
+                    <a class="m-nav-link" href="#">
+                        Demos
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </li>
+                <li class="bigger-s-size-el">
+                    <a class="m-nav-link" href="#">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main id="mainContent">
+            <div class="account-create-container">
+                <h4 class="account-create-title">Create Account</h4>
+                <div class="social-options">
+                    <p class="social-options-text">
+                        sign up with...
+                    </p>
+                    <ul class="social-options-ul">
+                        <li>
+                            <a class="social-account-link face-l" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-account-link goog-l" href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="create-account-text">
+                        or create account
+                    </p>
+                </div>
+                <form class="cre-ac-form" method="POST">
+                    <div class="form-content-ac">
+                        <input class="cre-ac-input" type="text" name="username" id="username" required placeholder="Your nickname" autocomplete="off">
+                    </div>
+                    <div class="form-content-ac">
+                        <input class="cre-ac-input" type="email" name="email" id="email" required placeholder="Your email">
+                    </div>
+                    <div class="form-content-ac">
+                        <input class="cre-ac-input" type="password" name="password" id="password" required placeholder="Password" autocomplete="off">
+                    </div>
+                    <div class="form-content-ac">
+                        <input class="cre-ac-input" type="password" name="password2" id="password2" required placeholder="Repeat password" autocomplete="off">
+                    </div>
+                    <p class="terms">By creating an account you agree to the<br>
+                        <a class="terms-link" href="#">Terms of Services</a> and 
+                        <a class="terms-link" href="#">Privacy Policy</a>
+                    </p>
+                    <button class="cre-ac-btn" type="submit">Sign up</button>
+                </form>
+            </div>
+        </main>
+        <footer id="mainFooter">
+            <div class="top-footer csw">
+                <div class="footer-item small-f">
+                    <h4 class="f-item-title">Our Stores</h4>
+                    <ul class="f-itel-ul">
+                        <li>
+                            <a href="#">New York</a>
+                        </li>
+                        <li>
+                            <a href="#">London SF</a>
+                        </li>
+                        <li>
+                            <a href="#">Cockfosters BP</a>
+                        </li>
+                        <li>
+                            <a href="#">Los Santos</a>
+                        </li>
+                        <li>
+                            <a href="#">Chicago</a>
+                        </li>
+                        <li>
+                            <a href="#">Las Vegas</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-item small-f">
+                    <h4 class="f-item-title">Information</h4>
+                    <ul class="f-itel-ul">
+                        <li>
+                            <a href="#">About Store</a>
+                        </li>
+                        <li>
+                            <a href="#">New Collection</a>
+                        </li>
+                        <li>
+                            <a href="#">Woman Dress</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Latest News</a>
+                        </li>
+                        <li>
+                            <a href="#">Returns</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-item big-f">
+                    <h4 class="f-item-title">Recent Posts</h4>
+                    <ul class="f-itel-ul">
+                        <li>
+                            <div class="post-box">
+                                <img src="https://picsum.photos/200" alt="">
+                                <div class="post-description">
+                                    <h5 class="post-title">Blog post both sidebars</h5>
+                                    <p class="post-text"> 
+                                        Consequatur quod, eius aliquam minus nemo
+                                        quod nihil quam omnis!
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-box">
+                                <img src="https://picsum.photos/200" alt="">
+                                <div class="post-description">
+                                    <h5 class="post-title">2019 post</h5>
+                                    <p class="post-text"> 
+                                        Consequatur quod, eius aliquam minus nemo
+                                        quod nihil quam omnis!
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post-box">
+                                <img src="https://picsum.photos/200" alt="">
+                                <div class="post-description">
+                                    <h5 class="post-title">Gallery post</h5>
+                                    <p class="post-text"> 
+                                        Consequatur quod, eius aliquam minus nemo
+                                        quod nihil quam omnis!
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-item big-f">
+                    <h4 class="f-item-title">Newsletter</h4>
+                    <p class="newsL-m-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium, omnis nisi error soluta a,
+                        uis? Sed, laudantium!
+                    </p>
+                    <form action="newsletterSubmit.html" class="newsletter">
+                        <div class="newsFormContents">
+                            <input class="newsletterInput" type="email" name="email" id="nEmail" placeholder="Enter your e-mail" required>
+                            <button class="newsletterBtn" type="submit">subscribe</button>
+                        </div>
+                    </form>
+                    <div class="social-box-m">
+                        <h4 class="f-item-title">Follow us</h4>
+                        <ul class="social-list-m">
+                            <li>
+                                <a class="m-social-link" href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="m-social-link" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="m-social-link" href="#">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="m-social-link" href="#">
+                                    <i class="fab fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="m-social-link" href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="m-social-link" href="#">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="m-social-link" href="#">
+                                    <i class="fab fa-vimeo-v"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer csw">
+                <div class="b-f-box">
+                    <img class="footer-logo" src="img/logoDark.jpg" alt="">
+                </div>
+                <div class="b-f-box">
+                    <h5 class="b-f-title">About Store</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Laboriosam nobis reprehenderit maiores facilis id officiis sint neque.
+                    </p>
+                    <ul class="pay-ul">
+                        <li>
+                            <a class="pay-link" href="#">
+                                <i class="fab fa-cc-visa"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pay-link" href="#">
+                                <i class="fab fa-cc-paypal"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pay-link" href="#">
+                                <i class="fab fa-cc-apple-pay"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pay-link" href="#">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-f-box contacts-f">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="content-contacts">
+                        <h5 class="contacts-t">Contact us</h5>
+                        <p class="contacts">
+                            Adress: 451 Wall Street, USA, New York <br>
+                            Phone: (555) 123 45 6789 <br>
+                            Email: info@domain.store
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="scrlBtn" class="scrollBtn-container">
+            <button id="toTop" class="toTopBtn" type="button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>
