@@ -1,2 +1,2 @@
 # firstRepo
-a few projects in one package (just for training)
+a few projects in one package (just for practice)
