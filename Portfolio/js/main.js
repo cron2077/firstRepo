@@ -61,7 +61,7 @@ themeToggleBtn.addEventListener('click', () => {
 
 
 //login MODAL
-const closeSpesialBtn = document.querySelector(".special-close");
+const closeSpesialBtn = document.querySelector(".close-btn");
 const openSpecialBtn = document.querySelector(".special");
 const modalS = document.querySelector(".message-box");
 
