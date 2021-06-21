@@ -266,6 +266,7 @@ img.show-photo { /*TO ACCEPT THE NEW CLASS*/
     }
 }
 
+
 /*LOG IN FORM stuff better form added from newform branch*/
 .login-container {
     position: relative;
@@ -281,8 +282,6 @@ img.show-photo { /*TO ACCEPT THE NEW CLASS*/
     width: 100%;
     height: 100%;
     background: url('https://i.pinimg.com/originals/bd/33/f9/bd33f9fca64a0b0c114300440fbd1688.gif');
-    /* background-color: #fffb00; */
-    /* background-blend-mode: multiply; */
     background-position: center;
     background-size: cover;
 }
@@ -303,26 +302,14 @@ img.show-photo { /*TO ACCEPT THE NEW CLASS*/
 .form-container {
     position: relative;
     margin: auto;
+    overflow: hidden;
     padding: 2.6em 1.4em;
     border-radius: 14px;
     color: var(--bg-dark);
     background: #fafafa;
     box-shadow: 0 2px 10px 1px rgba(0, 0, 0, .3);
 }
-.close-btn {
-    position: absolute;
-    top: 0;
-    right: 16px;
-    font-size: 1.42rem;
-    padding: .55em .2em .65em .2em;
-    background: var(--accent-clr2);
-    clip-path: polygon(100% 0, 100% 100%, 50% 80%, 0 100%, 0% 0%);
-    cursor: pointer;
-}
-.close-btn > i {
-    font-weight: 200;
-    color: white;
-}
+
 .sigh-in-form {
     display: flex;
     flex-direction: column;
@@ -427,3 +414,114 @@ img.show-photo { /*TO ACCEPT THE NEW CLASS*/
 .f-input:focus + .underline {
     transform: scale(1);
 }
+/*ANIMATION FOR LOGIN FORM*/
+
+.form-container {
+    animation: login 280ms ease-in forwards;
+}
+@keyframes login {
+    0%{
+        opacity: 0;
+        transform: translateY(90px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.close-btn:hover > i {
+    transform: rotate(85deg);
+}
+
+/*CLOSE BTN LOGIN*/
+.close-btn {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 16px;
+    font-size: 1.42rem;
+    padding: .55em .2em .65em .2em;
+    background: var(--accent-clr2);
+    transform: translateY(-3em);
+    clip-path: polygon(100% 0, 100% 100%, 50% 80%, 0 100%, 0% 0%);
+    animation: close-show 330ms forwards;
+    animation-delay: 550ms;
+    cursor: pointer;
+}
+@keyframes close-show {
+    0%{
+        transform: translateY(-3em);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.close_svg {
+    position: relative;
+    stroke: white;
+    stroke-width: 2px;
+    fill: none;
+    transition: 110ms ease-in-out;
+}
+.close_modal_btn:hover .close_svg{
+    stroke: black;
+}
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 3px;
+    stroke-miterlimit: 10;
+    stroke: white;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    animation-delay: 400ms;
+  }
+  .checkmark {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: white;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px white; /* original color - #7ac142*/
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  }
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    transform: rotate(0);
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+    transition: transform 130ms ease-in-out;
+  }
+  .checkmark:hover .checkmark__check {
+    transform: rotate(86deg);
+  }
+  .checkmark:hover {
+    /* stroke: black; */
+    fill: transparent;
+  }
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes scale {
+    0%, 100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+  @keyframes fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px transparent;
+    }
+  }
