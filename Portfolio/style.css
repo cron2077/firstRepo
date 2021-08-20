@@ -277,7 +277,7 @@ img.show-photo { /*TO ACCEPT THE NEW CLASS*/
         letter-spacing: 1px;
         border-radius: 7px;
         overflow: hidden;
-        font-size: clamp(2rem, 1rem + 10vw, 3rem);
+        font-size: clamp(1rem, 1rem + 10vw, 2.3rem);
     }
     .p1-mobile {
         background: url('img/P2\ -\ Copy-small.jpg');
