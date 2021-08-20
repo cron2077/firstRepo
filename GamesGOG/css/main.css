@@ -895,7 +895,7 @@ html, body {
 
 /*main content section - games*/
 #contentTag {
-  padding: 4em 0;
+  padding: 0;
 }
 
 .games-grid {
@@ -906,7 +906,7 @@ html, body {
   gap: 2.9em;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 6em 0;
 }
 
 .game-box {
@@ -1256,8 +1256,8 @@ html, body {
 /*CYBERPUNK PAGE*/
 .hero img {
   display: block;
+  width: 100%;
   max-width: 1920px;
-  height: 50vh;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
